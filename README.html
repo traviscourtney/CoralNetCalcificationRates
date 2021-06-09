@@ -371,7 +371,7 @@ summary {
 <div id="estimating-coralnet-calcification-rates-for-the-indo-pacific" class="section level2">
 <h2>Estimating CoralNet calcification rates for the Indo-Pacific</h2>
 <p>Taxa-specific area-normalized calcification rates (G=kg CaCO<sub>3</sub> m<sup>-2</sup> yr<sup>-1</sup>) were calculated iteratively as G=50th percentile, G<sub>lower</sub>=25th percentile, and G<sub>upper</sub>=75th percentile of a Monte-Carlo simulation (n=10,000) using randomly selected values within the range of uncertainties for each of the taxa-specific equation terms in the below equation:</p>
-<p><span class="math display">\[G=(n*cf*((c+b)*s*r+i))/10\]</span></p>
+<pre class="{r}"><code>G=(n*cf*((c+b)*s*r+i))/10</code></pre>
 <p>n = number of colonies per linear meter (±95%)</p>
 <pre><code>Source: 100/s</code></pre>
 <p>s = median colony diameter (cm) (±95%)</p>
@@ -400,7 +400,7 @@ summary {
 <div id="estimating-coralnet-calcification-rates-for-the-western-atlantic" class="section level2">
 <h2>Estimating CoralNet calcification rates for the Western Atlantic</h2>
 <p>Taxa-specific area-normalized calcification rates (G=kg CaCO<sub>3</sub> m<sup>-2</sup> yr<sup>-1</sup>) were calculated iteratively as G=50th percentile, G<sub>lower</sub>=25th percentile, and G<sub>upper</sub>=75th percentile of a Monte-Carlo simulation (n=10,0 00) using randomly selected values within the range of uncertainties for each of the taxa-specific equation terms in the below equation:</p>
-<p><span class="math display">\[G=(n*cf*((c+b)*s+i))/10\]</span></p>
+<pre class="{r}"><code>G=(n*cf*((c+b)*s+i))/10</code></pre>
 <p>n = number of colonies per linear meter (±95%)</p>
 <pre><code>Source: 100/(s/r)</code></pre>
 <p>s = median colony surface length (cm) (±95%)</p>
