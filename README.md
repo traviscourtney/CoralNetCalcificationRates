@@ -6,7 +6,7 @@ The following code generates area-normalized calcification and bioerosion rates 
 
 Taxa-specific area-normalized calcification rates (G=kg CaCO<sub>3</sub> m<sup>-2</sup> yr<sup>-1</sup>) were calculated iteratively as G=50th percentile, G<sub>lower</sub>=25th percentile, and G<sub>upper</sub>=75th percentile of a Monte-Carlo simulation (n=10,000) using randomly selected values within the range of uncertainties for each of the taxa-specific equation terms in the below equation:
 
-$$G=(n*cf*((c+b)*s*r+i))/10$$
+  G=(n*cf*((c+b)*s*r+i))/10
 
 n = number of colonies per linear meter (±95%)
 	
@@ -52,7 +52,7 @@ Substitutions:
 
 Taxa-specific area-normalized calcification rates (G=kg CaCO<sub>3</sub> m<sup>-2</sup> yr<sup>-1</sup>) were calculated iteratively as G=50th percentile, G<sub>lower</sub>=25th percentile, and G<sub>upper</sub>=75th percentile of a Monte-Carlo simulation (n=10,0 00) using randomly selected values within the range of uncertainties for each of the taxa-specific equation terms in the below equation:
 
-$$G=(n*cf*((c+b)*s+i))/10$$
+  G=(n*cf*((c+b)*s+i))/10
 
 n = number of colonies per linear meter (±95%)
 
