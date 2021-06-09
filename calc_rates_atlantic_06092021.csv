@@ -1,0 +1,110 @@
+"region","name","label","calc","calc_lower","calc_upper"
+"atlantic","Acropora","Acropora",33.26,25.19,41.49
+"atlantic","Acropora cervicornis","AcrCerv",44.04,37.52,51.99
+"atlantic","Acropora palmata","AcrPalm",18.44,13.17,24.49
+"atlantic","Acropora prolifera","AcrPro",13.54,9.69,17.21
+"atlantic","Agaricia","Agaricia",7.57,6.52,9.01
+"atlantic","Agaricia agaricites","AgAga",9.32,8.37,10.28
+"atlantic","Agaricia fragilis","AgFra",10.05,7.63,13.55
+"atlantic","Agaricia grahamae","AgGra",7.91,6.39,9.81
+"atlantic","Agaricia humilis","AgHum",9.55,8.57,10.51
+"atlantic","Agaricia lamarcki","AgLam",3.94,3.08,5.36
+"atlantic","Agaricia spp.","Agaricia",8.96,7.91,10.13
+"atlantic","Agaricia tenuifolia","AgTen",0.84,0.74,0.93
+"atlantic","Agaricia undata","AgUnd",8.56,6.67,11.16
+"atlantic","Bare Rock","BARK",-0.24,-0.24,-0.24
+"atlantic","Biofilmed Rock","BFlmRck",-0.24,-0.24,-0.24
+"atlantic","Cladocora arbuscula","ClaArb",5.39,3.86,7
+"atlantic","Cliona","Clio",-5.17,-7.3,-3.04
+"atlantic","Cliona californiana","CLCA",-5.17,-7.3,-3.04
+"atlantic","Cliona celata","CLCE",-5.17,-7.3,-3.04
+"atlantic","Cliona delitrix","CD",-10.48,-10.48,-10.48
+"atlantic","Cliona sp.","SpongeCLIO",-5.17,-7.3,-3.04
+"atlantic","Cliona spp.","CLION",-5.17,-7.3,-3.04
+"atlantic","Clionid spp.","CLIONI",-5.17,-7.3,-3.04
+"atlantic","Colpophyllia natans","CoNat",7.04,6.6,7.49
+"atlantic","Coral:Rock","Rc",-0.24,-0.24,-0.24
+"atlantic","Crustose coralline algae","CCA",-0.01,-0.04,0.03
+"atlantic","Dendrogyra cylindrus","DenCyl",3.99,3.9,4.08
+"atlantic","Diploria labyrinthiformis","DiplLab",9.29,8.71,9.86
+"atlantic","EAM: Rock or Substrate","EAM_Sub",-0.24,-0.24,-0.24
+"atlantic","Endolithic Algae on Rock","EdLtAlgRck",-0.24,-0.24,-0.24
+"atlantic","Eusmilia fastigiata","EFAS",0.92,0.67,1.19
+"atlantic","Excavating Bite Scar","BiteScar",-0.01,0.02,-0.04
+"atlantic","Exposed Rock","ERK",-0.24,-0.24,-0.24
+"atlantic","Favia","fav",8.46,8.34,8.6
+"atlantic","Favia fragum","FaviaFrag",8.46,8.34,8.6
+"atlantic","Green Rock","GrnRck",-0.24,-0.24,-0.24
+"atlantic","Hard coral (branched)","C_branch",1.17,0.84,1.5
+"atlantic","Hard coral (encrusting)","HC_encr",2.43,1.91,3.1
+"atlantic","Hard coral (foliose)","HC_fol",5.27,4.65,5.99
+"atlantic","Hard coral (massive)","HC_massive",11.76,10.39,13.26
+"atlantic","Hard coral (plating)","HCP",5.27,4.65,5.99
+"atlantic","Helioseris cucullata","HeCuc",3.68,3.53,3.83
+"atlantic","Isophyllia","Isophyllia",8.07,7.58,8.56
+"atlantic","Isophyllia rigida","IsophRig",6.01,5.62,6.42
+"atlantic","Isophyllia sinuosa","IsophSin",10.31,9.76,10.9
+"atlantic","Lightly Biofilmed Rock","LBFlmRck",-0.24,-0.24,-0.24
+"atlantic","Madracis","Madracis",20.11,16.75,24.06
+"atlantic","Madracis auretenra","MadAure",4.36,3.1,5.57
+"atlantic","Madracis carmabi","MadCarm",7.25,5.2,9.43
+"atlantic","Madracis decactis","MadDeca",47.37,31.19,69.42
+"atlantic","Madracis formosa","MadForm",5.52,4,7.1
+"atlantic","Madracis pharensis","MadPhar",67.97,59.34,78.06
+"atlantic","Madracis senaria","MadSen",67.95,59.21,77.73
+"atlantic","Madracis spp.","Madracis",5.58,4.03,7.24
+"atlantic","Manicina areolata","MAA",18.84,18.5,19.2
+"atlantic","Meandrina","MEAN",3.17,2.72,3.62
+"atlantic","Meandrina meandrites","MM",2.85,2.58,3.13
+"atlantic","Meandrina spp.","Meandrina",3.31,2.8,3.85
+"atlantic","Millepora","Millepora",4.26,3.47,5.29
+"atlantic","Millepora alcicornis","MILA",0.67,0.48,0.88
+"atlantic","Millepora complanata","MILC",2.5,1.79,3.44
+"atlantic","Millepora squarrosa","MIS",11.28,9.13,14.06
+"atlantic","Montastraea","Montastr",11.56,10.05,13.09
+"atlantic","Montastraea cavernosa","MontaCav",11.58,10.06,13.09
+"atlantic","Mussa angulosa","MUSANG",11.25,11.25,11.25
+"atlantic","Mycetophyllia","Mycetophy",3.97,3.62,4.35
+"atlantic","Mycetophyllia aliciae","MycetAli",3.29,3,3.59
+"atlantic","Mycetophyllia ferox","MycetFer",3.12,2.81,3.43
+"atlantic","Mycetophyllia spp.","Mycetophyllia",4.46,3.96,4.96
+"atlantic","Oculina","Oculina",1.07,0.77,1.38
+"atlantic","Oculina diffusa","OCD",1.07,0.77,1.38
+"atlantic","Orbicella","Orbicella",23.67,21.56,25.93
+"atlantic","Orbicella annularis","OrbAnn",32.55,29.21,36.26
+"atlantic","Orbicella faveolata","OrbFav",25.72,22.21,29.34
+"atlantic","Orbicella franksi","OrbFrank",12.71,12.39,13.21
+"atlantic","Porites","Porites",5.1,4.58,5.66
+"atlantic","Porites astreoides","PorAstr",9.73,8.39,11.13
+"atlantic","Porites branneri","PorBran",10.28,9.22,11.34
+"atlantic","Porites colonensis","PORCOL",5.63,4.96,6.37
+"atlantic","Porites divaricata","PorDiv",1.84,1.33,2.38
+"atlantic","Porites furcata","PorFurc",2.02,1.46,2.6
+"atlantic","Porites porites","PorPor",3,2.14,3.85
+"atlantic","Pseudodiploria","PSEU",10.64,9.28,12.02
+"atlantic","Pseudodiploria clivosa","PseuCliv",9.93,8.77,11.09
+"atlantic","Pseudodiploria strigosa","PseuStrig",11.41,9.8,13
+"atlantic","Rock","Rock",-0.24,-0.24,-0.24
+"atlantic","Rock Crustose Coralline Algae","RCCA",-0.01,-0.04,0.03
+"atlantic","Rock Turf Algae","RCTA",-0.24,-0.24,-0.24
+"atlantic","Rock_Pavement","RckPav",-0.24,-0.24,-0.24
+"atlantic","Scolymia","SCOL",10.36,9.62,11.15
+"atlantic","Scolymia cubensis","SCOCUB",9.87,9.15,10.64
+"atlantic","Scolymia lacera","SCOLA",10.74,9.96,11.55
+"atlantic","Siderastrea","Siderastr",5.38,4.96,5.85
+"atlantic","Siderastrea radians","SidRad",3.12,2.98,3.32
+"atlantic","Siderastrea siderea","SidSid",8.04,7.2,8.9
+"atlantic","Smothered Rock","SmRock",-0.24,-0.24,-0.24
+"atlantic","Solenastrea","SOLE",12.34,11.61,13.07
+"atlantic","Solenastrea bournoni","SOLBOU",17.09,16.68,17.56
+"atlantic","Solenastrea hyades","SOL",5.7,5.12,6.3
+"atlantic","Sponge: Cliona","SINV_SPO_C",-5.17,-7.3,-3.04
+"atlantic","Stephanocoenia intersepta","StephInt",5.21,4.87,5.56
+"atlantic","Stylaster roseus","Fire Sros",0.82,0.59,1.07
+"atlantic","Substrate: Consolidated (hard) Rock","SCRO",-0.24,-0.24,-0.24
+"atlantic","Thick Sediment Over Rock","ThkSedRck",-0.24,-0.24,-0.24
+"atlantic","Thin Sediment over Rock","ThnSedRck",-0.24,-0.24,-0.24
+"atlantic","Thin Turf/Biofilm on Rock","TnTrfBFRck",-0.24,-0.24,-0.24
+"atlantic","Tubastraea","Tubastraea",1.18,0.84,1.51
+"atlantic","Tubastraea coccinea","TUBCOC",1.17,0.85,1.51
+"atlantic","Very Thin Sediment over Rock","VThnSedRck",-0.24,-0.24,-0.24
