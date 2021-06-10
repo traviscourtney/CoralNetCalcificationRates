@@ -1,5 +1,5 @@
 # Area-normalized scaling of ReefBudget calcification and bioerosion rates for use with CoralNet
-The following code generates area-normalized calcification and bioerosion rates from ReefBudget methodologies for use with CoralNet image identification labels to support the integration of estimated carbonate production rates with CoralNet.The default rates include bioerosion to be consistent with ReefBudget methodologies, but include_bioerosion can be set to FALSE at the beginning of the script to calculate gross carbonate production rates instead.
+The following code generates area-normalized calcification and bioerosion rates from ReefBudget methodologies for use with CoralNet image identification labels to support the integration of estimated carbonate production rates with CoralNet.The default rates include bioerosion to be consistent with ReefBudget methodologies, but the include_bioerosion argument can be set to FALSE at the beginning of the script to calculate the carbonate production rate data sheets without bioerosion.
 
 ## Estimating CoralNet calcification rates for the Indo-Pacific
 
