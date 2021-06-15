@@ -365,9 +365,9 @@ summary {
 </div>
 
 
-<div id="area-normalized-scaling-of-reefbudget-calcification-and-bioerosion-rates-for-use-with-coralnet" class="section level1">
-<h1>Area-normalized scaling of ReefBudget calcification and bioerosion rates for use with CoralNet</h1>
-<p>The following code generates area-normalized calcification and bioerosion rates from ReefBudget methodologies for use with CoralNet image identification labels to support the integration of estimated carbonate production rates with CoralNet.The default rates include bioerosion to be consistent with ReefBudget methodologies, but the include_bioerosion argument can be set to FALSE at the beginning of the script to calculate the carbonate production rate data sheets without bioerosion.</p>
+<div id="area-normalized-scaling-of-reefbudget-calcification-macrobioerosion-and-microbioerosion-rates-for-use-with-coralnet" class="section level1">
+<h1>Area-normalized scaling of ReefBudget calcification, macrobioerosion, and microbioerosion rates for use with CoralNet</h1>
+<p>The following code generates area-normalized calcification, macrobioerosion, and microbioerosion rates from ReefBudget methodologies for use with CoralNet image identification labels to support the integration of estimated carbonate production rates with CoralNet.The default rates include macrobioerosion and microbioerosion to be consistent with ReefBudget methodologies, but the include_bioerosion argument can be set to FALSE at the beginning of the script to calculate the carbonate production rate data sheets without any sources of bioerosion.</p>
 <div id="estimating-coralnet-calcification-rates-for-the-indo-pacific" class="section level2">
 <h2>Estimating CoralNet calcification rates for the Indo-Pacific</h2>
 <p>Taxa-specific area-normalized calcification rates (G=kg CaCO<sub>3</sub> m<sup>-2</sup> yr<sup>-1</sup>) were calculated iteratively as G=50th percentile, G<sub>lower</sub>=25th percentile, and G<sub>upper</sub>=75th percentile of a Monte-Carlo simulation (n=10,000) using randomly selected values within the range of uncertainties for each of the taxa-specific equation terms in the below equation:</p>
@@ -380,26 +380,27 @@ summary {
 <pre><code>Source: proportion of 3D space occupied by branching corals (Doszpot et al. 2019) </code></pre>
 <p>c = calcification rate coefficient (± uncertainties)</p>
 <pre><code>Source: ReefBudget Indo-Pacific v1.2 (Perry et al. 2018)</code></pre>
-<p>b = bioerosion rate coefficient</p>
+<p>b = microbioerosion rate coefficient</p>
 <pre><code>Source: (Microbioerosion Rate)/10; ReefBudget Indo-Pacific v1.2 (Perry et al. 2018)</code></pre>
 <p>i = calcification rate intercept (± uncertainties)</p>
 <pre><code>Source: ReefBudget Indo-Pacific v1.2 (Perry et al. 2018)</code></pre>
 <p>r = rugosity (± uncertainty)</p>
-<pre><code>Source: mean (±SD) rugosity for morphology (González-Barrios and Álvarez-Filip 2018) morphology is most common from NOAA Pacific Islands coral demography data</code></pre>
+<pre><code>Source: mean (±SD) rugosity for morphology (González-Barrios and Álvarez-Filip 2018) morphology is most common 
+        from NOAA Pacific Islands coral demography data</code></pre>
 <p>10 = convert units to kg CaCO<sub>3</sub> m<sup>-2</sup> yr<sup>-1</sup></p>
 <p>Substitutions:</p>
 <ol style="list-style-type: decimal">
 <li>Genus and morphology filled in equation terms for labels at coarser taxa resolution</li>
 <li>The mean r of all morphologies was used to fill in encrusting morphologies, assuming that encrustation occurs over mean reef structural complexity</li>
-<li><i>Heliopora</i> branching c and i were determined by substituting extension and density data for <i>Heliopora</i> (Courtney et al., in rev) into ReefBudget <i>Pocillopora</i> branching with submassive conversion factor</li>
+<li><i>Heliopora</i> branching c and i were determined by substituting extension and density data for <i>Heliopora coerulea</i> (Courtney et al., in press) into ReefBudget <i>Pocillopora</i> branching with submassive conversion factor</li>
 <li><i>Porites</i> foliose c and i were determined by substituting extension and density data from ReefBudget <i>Porites</i> into ReefBudget Hard Coral Foliose</li>
 <li><i>Millepora</i> columnar c and i were determined by substituting extension and density data for ReefBudget <i>Millepora</i> into ReefBudget Hard Coral Columnar</li>
-<li>Macro- and micro- bioerosion rates from ReefBudget Indo-Pacific v1.2 were applied to all other hard substrates.</li>
+<li>Macrobioerosion and microbioerosion rates from ReefBudget Indo-Pacific v1.2 were applied to all other hard substrates</li>
 </ol>
 </div>
 <div id="estimating-coralnet-calcification-rates-for-the-western-atlantic" class="section level2">
 <h2>Estimating CoralNet calcification rates for the Western Atlantic</h2>
-<p>Taxa-specific area-normalized calcification rates (G=kg CaCO<sub>3</sub> m<sup>-2</sup> yr<sup>-1</sup>) were calculated iteratively as G=50th percentile, G<sub>lower</sub>=25th percentile, and G<sub>upper</sub>=75th percentile of a Monte-Carlo simulation (n=10,0 00) using randomly selected values within the range of uncertainties for each of the taxa-specific equation terms in the below equation:</p>
+<p>Taxa-specific area-normalized calcification rates (G=kg CaCO<sub>3</sub> m<sup>-2</sup> yr<sup>-1</sup>) were calculated iteratively as G=50th percentile, G<sub>lower</sub>=25th percentile, and G<sub>upper</sub>=75th percentile of a Monte-Carlo simulation (n=10,000) using randomly selected values within the range of uncertainties for each of the taxa-specific equation terms in the below equation:</p>
 <pre class="{r}"><code>G=(n*cf*((c+b)*s+i))/10</code></pre>
 <p>n = number of colonies per linear meter (±95%)</p>
 <pre><code>Source: 100/(s/r)</code></pre>
@@ -407,11 +408,10 @@ summary {
 <pre><code>Source: CARICOMP coral links (Dulcie 2010)</code></pre>
 <p>cf = conversion factor accounting for open space in branching morphologies (± uncertainty)</p>
 <pre><code>Source: proportion of 3D space occupied by branching corals (Doszpot et al. 2019) 
-     proportion of 3D space occupied by Acropora cervicornis (Million et al. 2021)
-     </code></pre>
+        proportion of 3D space occupied by Acropora cervicornis (Million et al. 2021)</code></pre>
 <p>c = calcification rate coefficient (± uncertainties)</p>
 <pre><code>Source: ReefBudget Caribbean v2 (Perry and Lange 2019)</code></pre>
-<p>b = bioerosion rate coefficient</p>
+<p>b = microbioerosion rate coefficient</p>
 <pre><code>Source: (Microbioerosion Rate)/10; ReefBudget Caribbean v2 (Perry and Lange 2019)</code></pre>
 <p>i = calcification rate intercept (± uncertainties)</p>
 <pre><code>Source: ReefBudget Caribbean v2 (Perry and Lange 2019)</code></pre>
@@ -422,13 +422,13 @@ summary {
 <ol style="list-style-type: decimal">
 <li>Genus and morphology filled in equation terms for labels at coarser taxa resolution</li>
 <li>The mean r of all morphologies was used to fill in encrusting morphologies, assuming that encrustation occurs over mean reef structural complexity</li>
-<li>Microbioerosion rates from ReefBudget Caribbean v2 were applied to all hard substrates.</li>
-<li><i>Cliona delitrix</i> bioerosion rates from ReefBudget Caribbean v2 were applied to <i>Cliona delitrix</i> and the mean (±SD) rate from ReefBudget Caribbean v2 of all Clionid sponges were applied to Clionid sponges.</li>
-<li>Mean (±SD) parrotfish bite volume from ReefBudget Caribbean v2 was applied to all bite scars.</li>
+<li>Microbioerosion rates from ReefBudget Caribbean v2 were applied to all hard substrates</li>
+<li><i>Cliona delitrix</i> bioerosion rates from ReefBudget Caribbean v2 were applied to <i>Cliona delitrix</i> and the mean (±SD) rate from ReefBudget Caribbean v2 of all Clionid sponges were applied to Clionid sponges</li>
+<li>Mean (±SD) parrotfish bite volume from ReefBudget Caribbean v2 was applied to all bite scars</li>
 </ol>
 <div id="references" class="section level3">
 <h3>References:</h3>
-<p>Courtney TA, Guest JR, Edwards AJ, Dizon RM. Linear extension, skeletal density, and calcification rates of the blue coral <i>Heliopora coerulea</i>. Coral Reefs. In review.</p>
+<p>Courtney TA, Guest JR, Edwards AJ, Dizon RM. Linear extension, skeletal density, and calcification rates of the blue coral <i>Heliopora coerulea</i>. Coral Reefs. In press.</p>
 <p>Doszpot NE, McWilliam MJ, Pratchett MS, Hoey AS, Figueira WF. Plasticity in three-dimensional geometry of branching corals along a cross-shelf gradient. Diversity. 2019 Mar;11(3):44.</p>
 <p>González-Barrios FJ, Álvarez-Filip L. A framework for measuring coral species-specific contribution to reef functioning in the Caribbean. Ecological Indicators. 2018 Dec 1;95:877-86.</p>
 <p>Linton, Dulcie; Bermuda Institute of Ocean Sciences (BIOS) (2010). A unified, long-term, Caribbean-wide initiative to identity the factors responsible for sustaining mangrove wetland, seagrass meadow, and coral reef productivity, February 1993 - October 1998 (NCEI Accession 0000501). NOAA National Centers for Environmental Information. Dataset. <a href="https://accession.nodc.noaa.gov/0000501" class="uri">https://accession.nodc.noaa.gov/0000501</a>.</p>
