@@ -1,5 +1,5 @@
 # Area-normalized scaling of ReefBudget calcification, macrobioerosion, and microbioerosion rates for use with CoralNet
-The following code generates area-normalized calcification, macrobioerosion, and microbioerosion rates from ReefBudget methodologies for use with CoralNet image identification labels to support the integration of estimated carbonate production rates with CoralNet. The default rates include macrobioerosion and microbioerosion to be consistent with ReefBudget methodologies, but the include_bioerosion argument can be set to FALSE at the beginning of the script to calculate the carbonate production rate data sheets without any sources of bioerosion. Because these rates have been adapted for CoralNet benthic image labels, the included estimates do not account for mobile sources of parrotfish or urchin bioerosion that are included in the complete ReefBudget methodologies.
+The following code generates area-normalized calcification, macrobioerosion, and microbioerosion rates from ReefBudget methodologies for use with CoralNet image identification labels to support the integration of estimated carbonate production rates with CoralNet, an automated benthic image analysis platform (https://coralnet.ucsd.edu/; Beijbom et al., 2015). The default rates include macrobioerosion and microbioerosion to be consistent with ReefBudget methodologies, but the include_bioerosion argument can be set to FALSE at the beginning of the script to calculate the carbonate production rate data sheets without any sources of bioerosion. Because these rates have been adapted for CoralNet benthic image labels, the included estimates do not account for mobile sources of parrotfish or urchin bioerosion that are included in the complete ReefBudget methodologies.
 
 ## Estimating CoralNet calcification rates for the Indo-Pacific
 
@@ -99,6 +99,9 @@ Substitutions:
 5)  Mean (±SD) parrotfish bite volume from ReefBudget Caribbean v2 was applied to all bite scars
 
 ### References:
+
+Beijbom O, Edmunds PJ, Roelfsema C, Smith J, Kline DI, Neal BP, Dunlap MJ, Moriarty V, Fan T-Y, Tan C-J, Chan S, Treibitz T, Gamst A, Mitchell BG, Kriegman D (2015) Towards Automated Annotation of Benthic Survey Images: Variability of Human Experts and Operational Modes of Automation. PLoS ONE 10(7): e0130312.
+
 
 Courtney TA, Guest JR, Edwards AJ, Dizon RM. Linear extension, skeletal density, and calcification rates of the blue coral <i>Heliopora coerulea</i>. Coral Reefs. In press.
 
