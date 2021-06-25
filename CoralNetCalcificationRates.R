@@ -3,8 +3,8 @@
 ##’
 ##’ @author Travis A Courtney
 ##’ @contact traviscourtney@gmail.com
-##’ @date 2021-06–09
-##’ @reference Courtney TA, Lange ID, Perry CT, Andersson AJ (2021) Area-normalized ReefBudget calcification and bioerosion rates for use with CoralNet
+##’ @date 2021-06–25
+##’ @reference Courtney TA, Chan S, Lange ID, Perry CT, Andersson AJ (2021) Area-normalized ReefBudget calcification and bioerosion rates for use with CoralNet
 ##’ @log Version 1
 
 ###########include or exclude bioerosion##########
@@ -240,29 +240,29 @@ NOAA_CRED_other_label_rates=cbind(subset(NOAA_CRED_CoralNet_labelset,GROUP!="Har
 
 #select only necessary columns
 NOAA_CRED_all=rbind(NOAA_calc_rates,NOAA_CRED_bioerosion,NOAA_CRED_other_label_rates)
-NOAA_CRED_all$region="indo-pacific"
+NOAA_CRED_all$region="Indo-Pacific"
 colnames(NOAA_CRED_all)=c("name","label","group","taxa","calc","calc_lower","calc_upper","region")
 NOAA_CRED_all$label=str_remove(NOAA_CRED_all$label, "[*]")
-calc_rates_indopacific=bind_cols(region=NOAA_CRED_all$region,name=NOAA_CRED_all$name,label=NOAA_CRED_all$label,calc=NOAA_CRED_all$calc,calc_lower=NOAA_CRED_all$calc_lower,calc_upper=NOAA_CRED_all$calc_upper)
+calc_rates_indopacific=bind_cols('Region'=NOAA_CRED_all$region,'Name'=NOAA_CRED_all$name,'Mean'=NOAA_CRED_all$calc,'Lower bound'=NOAA_CRED_all$calc_lower,'Upper bound'=NOAA_CRED_all$calc_upper)
 
 #import duplicate labels for NOAA CRED to general labels
-colnames(duplicates)=c("name","duplicate")
-calc_rates_indopacific_duplicates=merge(calc_rates_indopacific,duplicates,by="name")
-duplicate_labels_indopacific=calc_rates_indopacific_duplicates%>%select(region,duplicate,label,calc,calc_lower,calc_upper)
-duplicate_labels_indopacific=rename(duplicate_labels_indopacific,name=duplicate)
+colnames(duplicates)=c("Name","Duplicate")
+calc_rates_indopacific_duplicates=merge(calc_rates_indopacific,duplicates,by="Name")
+duplicate_labels_indopacific=calc_rates_indopacific_duplicates%>%select('Region','Duplicate','Mean','Lower bound','Upper bound')
+duplicate_labels_indopacific=rename(duplicate_labels_indopacific,Name=Duplicate)
 
 #generate genus level means from genus+morphology NOAA CRED labels
-Acropora=calc_rates_indopacific[str_which(calc_rates_indopacific$name,"Acropora"),]
-Acropora_rates=bind_cols(region="indo-pacific",name="Acropora",label="Acropora",calc=round(mean(Acropora$calc),digits=2),calc_lower=round(mean(Acropora$calc_lower),digits=2),calc_upper=round(mean(Acropora$calc_upper),digits=2))
-Montipora=calc_rates_indopacific[str_which(calc_rates_indopacific$name,"Montipora"),]
-Montipora_rates=bind_cols(region="indo-pacific",name="Montipora",label="Monti",calc=round(mean(Montipora$calc),digits=2),calc_lower=round(mean(Montipora$calc_lower),digits=2),calc_upper=round(mean(Montipora$calc_upper),digits=2))
-Porites=calc_rates_indopacific[str_which(calc_rates_indopacific$name,"Porites"),]
-Porites_rates=bind_cols(region="indo-pacific",name="Porites",label="Porites",calc=round(mean(Porites$calc),digits=2),calc_lower=round(mean(Porites$calc_lower),digits=2),calc_upper=round(mean(Porites$calc_upper),digits=2))
+Acropora=calc_rates_indopacific[str_which(calc_rates_indopacific$Name,"Acropora"),]
+Acropora_rates=bind_cols(Region="Indo-Pacific",Name="Acropora",'Mean'=round(mean(Acropora$'Mean'),digits=2),'Lower bound'=round(mean(Acropora$'Lower bound'),digits=2),'Upper bound'=round(mean(Acropora$'Upper bound'),digits=2))
+Montipora=calc_rates_indopacific[str_which(calc_rates_indopacific$Name,"Montipora"),]
+Montipora_rates=bind_cols(Region="Indo-Pacific",Name="Montipora",'Mean'=round(mean(Montipora$Mean),digits=2),'Lower bound'=round(mean(Montipora$'Lower bound'),digits=2),'Upper bound'=round(mean(Montipora$'Upper bound'),digits=2))
+Porites=calc_rates_indopacific[str_which(calc_rates_indopacific$Name,"Porites"),]
+Porites_rates=bind_cols(Region="Indo-Pacific",Name="Porites",'Mean'=round(mean(Porites$Mean),digits=2),'Lower bound'=round(mean(Porites$'Lower bound'),digits=2),'Upper bound'=round(mean(Porites$'Upper bound'),digits=2))
 
 #combine NOAA CRED labels with duplicate labels and genus level labels
-calc_rates_indopacific_all=bind_rows(calc_rates_indopacific,duplicate_labels_indopacific,Acropora_rates,Montipora_rates,Porites_rates) %>% arrange(name)
+calc_rates_indopacific_all=bind_rows(calc_rates_indopacific,duplicate_labels_indopacific,Acropora_rates,Montipora_rates,Porites_rates) %>% arrange(Name)
 calc_rates_indopacific_all=calc_rates_indopacific_all[complete.cases(calc_rates_indopacific_all),]
-write.csv(calc_rates_indopacific_all,"calc_rates_indopacific_06092021.csv",row.names=FALSE)
+#write.csv(calc_rates_indopacific_all,"calc_rates_indopacific_06252021.csv",row.names=FALSE)
 
 
 #########CoralNet Western Atlantic Calcification Rates##########
@@ -494,13 +494,13 @@ HardCoralFoliose$label="HC_fol"
 #Merge data frames
 CoralNet_Atlantic_Rates2=rbind(CoralNet_Atlantic_Rates,HardCoralPlating,HardCoralFoliose)
 #add atlantic region label
-CoralNet_Atlantic_Rates2$region="atlantic"
+CoralNet_Atlantic_Rates2$region="Atlantic"
 #remove extra columns and labels missing calcification rates
-CoralNet_Atlantic_Rates3=CoralNet_Atlantic_Rates2 %>% select(region,name,label,calc,calc_lower,calc_upper) %>% drop_na()
+CoralNet_Atlantic_Rates3=CoralNet_Atlantic_Rates2 %>% select('Region'=region,'Name'=name,'Mean'=calc,'Lower bound'=calc_lower,'Upper bound'=calc_upper) %>% drop_na()
 #order by name
-calc_rates_atlantic=CoralNet_Atlantic_Rates3[order(CoralNet_Atlantic_Rates3$name),]
-write.csv(calc_rates_atlantic,"calc_rates_atlantic_06092021.csv",row.names=FALSE)
+calc_rates_atlantic=CoralNet_Atlantic_Rates3[order(CoralNet_Atlantic_Rates3$Name),]
+#write.csv(calc_rates_atlantic,"calc_rates_atlantic_06252021.csv",row.names=FALSE)
 
 #########Merge Indo-Pacific and Western Atlantic Calcification Rate Tables##########
 calc_rates=bind_rows(calc_rates_indopacific_all,calc_rates_atlantic) %>% drop_na()
-write.csv(calc_rates,"calc_rates_06092021.csv",row.names=FALSE)
+write.csv(calc_rates,"CoralNet_Calcification_Bioerosion_Rates_v1.csv",row.names=FALSE)
