@@ -3,7 +3,7 @@ The following code generates area-normalized calcification, macrobioerosion, and
 
 Please cite the following data release for use of the area-normalized calcification and bioerosion rates as follows:
 
-  Courtney TA, Chan S, Lange ID, Perry CT, Andersson AJ (2021) Area-normalized ReefBudget calcification, macrobioerosion, and microbioerosion rates for use with CoralNet v1.
+  Courtney TA, Chan S, Lange ID, Perry CT, Andersson AJ (2021) Area-normalized scaling of ReefBudget calcification, macrobioerosion, and microbioerosion rates for use with CoralNet v1.
 
 ## Estimating CoralNet calcification rates for the Indo-Pacific
 
