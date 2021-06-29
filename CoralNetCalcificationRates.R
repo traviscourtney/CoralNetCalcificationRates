@@ -9,7 +9,7 @@
 
 ###########include or exclude bioerosion##########
 #bioerosion rates are included by default, set include_bioerosion to FALSE to calculate gross carbonate production only
-include_bioerosion=FALSE
+include_bioerosion=TRUE
 
 ###########require packages and scripts##########
 library(fs)
