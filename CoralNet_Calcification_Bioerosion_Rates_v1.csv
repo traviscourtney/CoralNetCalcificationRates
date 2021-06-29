@@ -1,131 +1,130 @@
 "Region","Name","Mean","Lower bound","Upper bound"
-"Indo-Pacific","Acanthastrea",3.9,3.34,4.51
-"Indo-Pacific","Acropora",24.25,19.66,31.66
-"Indo-Pacific","Acropora (branching)",18.48,13.38,23.91
-"Indo-Pacific","Acropora (tabulate)",30.02,25.94,39.41
+"Indo-Pacific","Acanthastrea",3.89,3.33,4.5
+"Indo-Pacific","Acropora",24.22,19.62,31.76
+"Indo-Pacific","Acropora (branching)",18.42,13.25,23.94
+"Indo-Pacific","Acropora (tabulate)",30.02,26,39.58
 "Indo-Pacific","Astrea",1.36,1.13,1.65
-"Indo-Pacific","Astreopora",5,4.17,6.03
+"Indo-Pacific","Astreopora",4.99,4.16,6.08
 "Indo-Pacific","CCA growing on rubble",0.18,0.1,0.27
-"Indo-Pacific","Coscinaraea",2.89,2.38,3.52
-"Indo-Pacific","CRED-Acanthastrea spp",3.9,3.34,4.51
-"Indo-Pacific","CRED-Acropora spp_branching",18.48,13.38,23.91
-"Indo-Pacific","CRED-Acropora spp_tabulate",30.02,25.94,39.41
+"Indo-Pacific","Coscinaraea",2.9,2.4,3.54
+"Indo-Pacific","CRED-Acanthastrea spp",3.89,3.33,4.5
+"Indo-Pacific","CRED-Acropora spp_branching",18.42,13.25,23.94
+"Indo-Pacific","CRED-Acropora spp_tabulate",30.02,26,39.58
 "Indo-Pacific","CRED-Astrea spp",1.36,1.13,1.65
-"Indo-Pacific","CRED-Astreopora spp",5,4.17,6.03
-"Indo-Pacific","CRED-Branching hard coral",11.79,8.5,15.27
-"Indo-Pacific","CRED-CCA growing on hard substrate",0.18,0.11,0.27
+"Indo-Pacific","CRED-Astreopora spp",4.99,4.16,6.08
+"Indo-Pacific","CRED-Branching hard coral",11.79,8.48,15.23
+"Indo-Pacific","CRED-CCA growing on hard substrate",0.18,0.1,0.27
 "Indo-Pacific","CRED-CCA growing on rubble",0.18,0.1,0.27
-"Indo-Pacific","CRED-Columnar hard coral",7.19,6.48,7.94
-"Indo-Pacific","CRED-Coscinaraea spp",2.89,2.38,3.52
-"Indo-Pacific","CRED-Cyphastrea spp",1.56,1.28,1.93
-"Indo-Pacific","CRED-Diploastrea spp",10.72,9.21,12.43
-"Indo-Pacific","CRED-Echinophyllia spp",5.25,4.55,5.99
-"Indo-Pacific","CRED-Echinopora spp",3.28,2.8,3.8
-"Indo-Pacific","CRED-Encrusting hard coral",4.08,3.27,5.15
-"Indo-Pacific","CRED-Euphyllia spp",10.97,10.02,11.92
-"Indo-Pacific","CRED-Favia spp",0.63,0.47,0.84
-"Indo-Pacific","CRED-Favites spp",0.52,0.4,0.66
-"Indo-Pacific","CRED-Foliose hard coral",7.24,6.33,8.29
-"Indo-Pacific","CRED-Free-living hard coral",38.69,34.78,43.08
-"Indo-Pacific","CRED-Fungia spp",29.13,26.18,32.2
-"Indo-Pacific","CRED-Galaxea spp",4.09,3.57,4.72
-"Indo-Pacific","CRED-Goniastrea spp",13.1,11.69,14.66
-"Indo-Pacific","CRED-Goniopora/Alveopora spp",3.71,3.11,4.41
+"Indo-Pacific","CRED-Columnar hard coral",7.2,6.45,7.92
+"Indo-Pacific","CRED-Coscinaraea spp",2.9,2.4,3.54
+"Indo-Pacific","CRED-Cyphastrea spp",1.57,1.28,1.93
+"Indo-Pacific","CRED-Diploastrea spp",10.71,9.19,12.41
+"Indo-Pacific","CRED-Echinophyllia spp",5.23,4.56,5.98
+"Indo-Pacific","CRED-Echinopora spp",3.27,2.78,3.81
+"Indo-Pacific","CRED-Encrusting hard coral",4.07,3.25,5.16
+"Indo-Pacific","CRED-Euphyllia spp",10.98,10.03,11.93
+"Indo-Pacific","CRED-Favia spp",0.62,0.47,0.84
+"Indo-Pacific","CRED-Favites spp",0.51,0.4,0.65
+"Indo-Pacific","CRED-Foliose hard coral",7.25,6.32,8.29
+"Indo-Pacific","CRED-Free-living hard coral",38.54,34.76,42.85
+"Indo-Pacific","CRED-Fungia spp",29.06,26.12,32.19
+"Indo-Pacific","CRED-Galaxea spp",4.11,3.57,4.72
+"Indo-Pacific","CRED-Goniastrea spp",13.11,11.75,14.63
+"Indo-Pacific","CRED-Goniopora/Alveopora spp",3.7,3.11,4.41
 "Indo-Pacific","CRED-Hard substrate",-0.475,-0.475,-0.475
-"Indo-Pacific","CRED-Heliopora spp",7.55,5.41,9.67
-"Indo-Pacific","CRED-Hydnophora spp",19.47,17.64,21.38
-"Indo-Pacific","CRED-Isopora spp",3.24,2.82,3.72
-"Indo-Pacific","CRED-Leptastrea spp",5.17,3.67,7.41
-"Indo-Pacific","CRED-Leptoria spp",3.18,2.63,3.83
-"Indo-Pacific","CRED-Leptoseris spp",4.13,3.52,4.82
-"Indo-Pacific","CRED-Lobophyllia spp",10.19,9.17,11.15
-"Indo-Pacific","CRED-Massive hard coral",22.14,19.62,24.98
-"Indo-Pacific","CRED-Merulina spp",9.17,8.46,9.9
-"Indo-Pacific","CRED-Millepora spp",13.15,11.81,14.56
-"Indo-Pacific","CRED-Montipora spp_branching",15.65,11.29,20.2
-"Indo-Pacific","CRED-Montipora spp_encrusting",8.25,6.87,10.25
-"Indo-Pacific","CRED-Montipora spp_foliose",7.39,6.54,8.33
-"Indo-Pacific","CRED-Oulophyllia spp",54.15,49.61,58.69
-"Indo-Pacific","CRED-Pachyseris spp",9.25,8.57,9.99
-"Indo-Pacific","CRED-Pavona spp_encrusting",4.01,3.35,4.78
-"Indo-Pacific","CRED-Pavona spp_foliose",10.41,9.89,10.96
-"Indo-Pacific","CRED-Pavona spp_massive",30.53,27.51,33.74
-"Indo-Pacific","CRED-Phymastrea spp",1.36,1.22,1.5
-"Indo-Pacific","CRED-Platygyra spp",16.31,14.55,18.02
-"Indo-Pacific","CRED-Plerogyra spp",7.4,6.93,7.87
-"Indo-Pacific","CRED-Pocillopora spp",17.21,12.41,22.36
-"Indo-Pacific","CRED-Porites spp_branching",10.3,7.42,13.33
-"Indo-Pacific","CRED-Porites spp_encrusting",5.48,4.53,6.62
-"Indo-Pacific","CRED-Porites spp_foliose",4.2,3.79,4.64
-"Indo-Pacific","CRED-Porites spp_massive",23.3,20.88,25.76
-"Indo-Pacific","CRED-Psammocora spp",8.2,6.59,10.41
+"Indo-Pacific","CRED-Heliopora spp",7.56,5.38,9.67
+"Indo-Pacific","CRED-Hydnophora spp",19.46,17.58,21.39
+"Indo-Pacific","CRED-Isopora spp",3.24,2.81,3.72
+"Indo-Pacific","CRED-Leptastrea spp",5.14,3.64,7.31
+"Indo-Pacific","CRED-Leptoria spp",3.19,2.63,3.86
+"Indo-Pacific","CRED-Leptoseris spp",4.14,3.53,4.83
+"Indo-Pacific","CRED-Lobophyllia spp",10.17,9.17,11.12
+"Indo-Pacific","CRED-Massive hard coral",22.21,19.66,24.97
+"Indo-Pacific","CRED-Merulina spp",9.18,8.47,9.9
+"Indo-Pacific","CRED-Millepora spp",13.15,11.8,14.57
+"Indo-Pacific","CRED-Montipora spp_branching",15.64,11.21,20.14
+"Indo-Pacific","CRED-Montipora spp_encrusting",8.3,6.89,10.29
+"Indo-Pacific","CRED-Montipora spp_foliose",7.38,6.51,8.36
+"Indo-Pacific","CRED-Oulophyllia spp",54.18,49.58,58.71
+"Indo-Pacific","CRED-Pachyseris spp",9.24,8.56,9.97
+"Indo-Pacific","CRED-Pavona spp_encrusting",4.02,3.34,4.8
+"Indo-Pacific","CRED-Pavona spp_foliose",10.43,9.88,10.97
+"Indo-Pacific","CRED-Pavona spp_massive",30.6,27.49,33.79
+"Indo-Pacific","CRED-Phymastrea spp",1.35,1.21,1.51
+"Indo-Pacific","CRED-Platygyra spp",16.16,14.54,18.03
+"Indo-Pacific","CRED-Plerogyra spp",7.42,6.94,7.9
+"Indo-Pacific","CRED-Pocillopora spp",17.43,12.47,22.51
+"Indo-Pacific","CRED-Porites spp_branching",10.34,7.42,13.38
+"Indo-Pacific","CRED-Porites spp_encrusting",5.44,4.54,6.56
+"Indo-Pacific","CRED-Porites spp_foliose",4.2,3.78,4.64
+"Indo-Pacific","CRED-Porites spp_massive",23.21,20.86,25.71
+"Indo-Pacific","CRED-Psammocora spp",8.2,6.55,10.29
 "Indo-Pacific","CRED-Rubble substrate",-0.475,-0.475,-0.475
-"Indo-Pacific","CRED-Stylophora spp",10.44,7.46,13.54
-"Indo-Pacific","CRED-Symphyllia spp",29.63,26.83,32.49
-"Indo-Pacific","CRED-Turbinaria spp",7.17,6.25,8.2
+"Indo-Pacific","CRED-Stylophora spp",10.53,7.52,13.67
+"Indo-Pacific","CRED-Symphyllia spp",29.68,26.79,32.54
+"Indo-Pacific","CRED-Turbinaria spp",7.16,6.24,8.23
 "Indo-Pacific","CRED-Turf growing on hard substrate",-0.475,-0.475,-0.475
 "Indo-Pacific","CRED-Turf growing on rubble",-0.475,-0.475,-0.475
-"Indo-Pacific","Cyphastrea",1.56,1.28,1.93
-"Indo-Pacific","Diploastrea",10.72,9.21,12.43
-"Indo-Pacific","Dipsastraea",0.63,0.47,0.84
-"Indo-Pacific","Echinophyllia",5.25,4.55,5.99
-"Indo-Pacific","Echinopora",3.28,2.8,3.8
-"Indo-Pacific","Euphyllia",10.97,10.02,11.92
-"Indo-Pacific","Favites",0.52,0.4,0.66
-"Indo-Pacific","Fungia",29.13,26.18,32.2
-"Indo-Pacific","Galaxea",4.09,3.57,4.72
-"Indo-Pacific","Goniastrea",13.1,11.69,14.66
-"Indo-Pacific","Hard Coral (branching)",11.79,8.5,15.27
-"Indo-Pacific","Hard Coral (columnar)",7.19,6.48,7.94
-"Indo-Pacific","Hard Coral (encrusting)",4.08,3.27,5.15
-"Indo-Pacific","Hard Coral (foliose)",7.24,6.33,8.29
-"Indo-Pacific","Hard Coral (free-living)",38.69,34.78,43.08
-"Indo-Pacific","Hard Coral (massive)",22.14,19.62,24.98
+"Indo-Pacific","Cyphastrea",1.57,1.28,1.93
+"Indo-Pacific","Diploastrea",10.71,9.19,12.41
+"Indo-Pacific","Dipsastraea",0.62,0.47,0.84
+"Indo-Pacific","Echinophyllia",5.23,4.56,5.98
+"Indo-Pacific","Echinopora",3.27,2.78,3.81
+"Indo-Pacific","Euphyllia",10.98,10.03,11.93
+"Indo-Pacific","Favites",0.51,0.4,0.65
+"Indo-Pacific","Fungia",29.06,26.12,32.19
+"Indo-Pacific","Galaxea",4.11,3.57,4.72
+"Indo-Pacific","Goniastrea",13.11,11.75,14.63
+"Indo-Pacific","Hard Coral (branching)",11.79,8.48,15.23
+"Indo-Pacific","Hard Coral (columnar)",7.2,6.45,7.92
+"Indo-Pacific","Hard Coral (encrusting)",4.07,3.25,5.16
+"Indo-Pacific","Hard Coral (foliose)",7.25,6.32,8.29
+"Indo-Pacific","Hard Coral (free-living)",38.54,34.76,42.85
+"Indo-Pacific","Hard Coral (massive)",22.21,19.66,24.97
 "Indo-Pacific","Hard Substrate",-0.475,-0.475,-0.475
-"Indo-Pacific","Heliopora",7.55,5.41,9.67
-"Indo-Pacific","Hydnophora",19.47,17.64,21.38
-"Indo-Pacific","Isopora",3.24,2.82,3.72
-"Indo-Pacific","Leptastrea",5.17,3.67,7.41
-"Indo-Pacific","Leptoria",3.18,2.63,3.83
-"Indo-Pacific","Leptoseris",4.13,3.52,4.82
-"Indo-Pacific","Lobophyllia",10.19,9.17,11.15
-"Indo-Pacific","Merulina",9.17,8.46,9.9
-"Indo-Pacific","Millepora",13.15,11.81,14.56
-"Indo-Pacific","Montipora",10.43,8.23,12.93
-"Indo-Pacific","Montipora (branching)",15.65,11.29,20.2
-"Indo-Pacific","Montipora (encrusting)",8.25,6.87,10.25
-"Indo-Pacific","Montipora (foliose)",7.39,6.54,8.33
-"Indo-Pacific","Oulophyllia",54.15,49.61,58.69
-"Indo-Pacific","Pachyseris",9.25,8.57,9.99
-"Indo-Pacific","Phymastrea",1.36,1.22,1.5
-"Indo-Pacific","Platygyra",16.31,14.55,18.02
-"Indo-Pacific","Plerogyra",7.4,6.93,7.87
-"Indo-Pacific","Pocillopora",17.21,12.41,22.36
-"Indo-Pacific","Porites",10.82,9.15,12.59
-"Indo-Pacific","Porites (branching)",10.3,7.42,13.33
-"Indo-Pacific","Porites (massive)",23.3,20.88,25.76
-"Indo-Pacific","Psammocora",8.2,6.59,10.41
-"Indo-Pacific","Stylophora",10.44,7.46,13.54
-"Indo-Pacific","Symphyllia",29.63,26.83,32.49
-"Indo-Pacific","Turbinaria (coral)",7.17,6.25,8.2
+"Indo-Pacific","Heliopora",7.56,5.38,9.67
+"Indo-Pacific","Hydnophora",19.46,17.58,21.39
+"Indo-Pacific","Isopora",3.24,2.81,3.72
+"Indo-Pacific","Leptastrea",5.14,3.64,7.31
+"Indo-Pacific","Leptoria",3.19,2.63,3.86
+"Indo-Pacific","Leptoseris",4.14,3.53,4.83
+"Indo-Pacific","Lobophyllia",10.17,9.17,11.12
+"Indo-Pacific","Merulina",9.18,8.47,9.9
+"Indo-Pacific","Millepora",13.15,11.8,14.57
+"Indo-Pacific","Montipora",10.44,8.2,12.93
+"Indo-Pacific","Montipora (branching)",15.64,11.21,20.14
+"Indo-Pacific","Montipora (encrusting)",8.3,6.89,10.29
+"Indo-Pacific","Montipora (foliose)",7.38,6.51,8.36
+"Indo-Pacific","Oulophyllia",54.18,49.58,58.71
+"Indo-Pacific","Pachyseris",9.24,8.56,9.97
+"Indo-Pacific","Phymastrea",1.35,1.21,1.51
+"Indo-Pacific","Platygyra",16.16,14.54,18.03
+"Indo-Pacific","Plerogyra",7.42,6.94,7.9
+"Indo-Pacific","Pocillopora",17.43,12.47,22.51
+"Indo-Pacific","Porites",10.8,9.15,12.57
+"Indo-Pacific","Porites (branching)",10.34,7.42,13.38
+"Indo-Pacific","Porites (massive)",23.21,20.86,25.71
+"Indo-Pacific","Psammocora",8.2,6.55,10.29
+"Indo-Pacific","Stylophora",10.53,7.52,13.67
+"Indo-Pacific","Symphyllia",29.68,26.79,32.54
+"Indo-Pacific","Turbinaria (coral)",7.16,6.24,8.23
 "Indo-Pacific","Turf on rubble",-0.475,-0.475,-0.475
-"Atlantic","Acropora",33.22,25.09,41.36
-"Atlantic","Acropora cervicornis",44.44,37.77,52.27
-"Atlantic","Acropora palmata",18.54,13.45,24.48
-"Atlantic","Acropora prolifera",13.54,9.72,17.27
-"Atlantic","Agaricia",7.56,6.52,9.03
-"Atlantic","Agaricia agaricites",9.34,8.34,10.29
-"Atlantic","Agaricia fragilis",10.02,7.65,13.49
-"Atlantic","Agaricia grahamae",7.93,6.42,9.78
-"Atlantic","Agaricia humilis",9.56,8.58,10.53
-"Atlantic","Agaricia lamarcki",4.01,3.08,5.38
-"Atlantic","Agaricia spp.",8.97,7.91,10.13
+"Atlantic","Acropora",33.1,25.13,41.12
+"Atlantic","Acropora cervicornis",44.15,37.58,51.96
+"Atlantic","Acropora palmata",18.5,13.32,24.38
+"Atlantic","Acropora prolifera",13.47,9.71,17.2
+"Atlantic","Agaricia",7.56,6.49,8.96
+"Atlantic","Agaricia agaricites",9.33,8.39,10.28
+"Atlantic","Agaricia fragilis",10.05,7.64,13.62
+"Atlantic","Agaricia grahamae",7.93,6.41,9.81
+"Atlantic","Agaricia humilis",9.57,8.59,10.55
+"Atlantic","Agaricia lamarcki",3.95,3.04,5.36
 "Atlantic","Agaricia tenuifolia",0.83,0.74,0.93
-"Atlantic","Agaricia undata",8.55,6.64,11.17
+"Atlantic","Agaricia undata",8.55,6.61,11.17
 "Atlantic","Bare Rock",-0.24,-0.24,-0.24
 "Atlantic","Biofilmed Rock",-0.24,-0.24,-0.24
-"Atlantic","Cladocora",5.39,3.91,6.99
-"Atlantic","Cladocora arbuscula",5.39,3.9,6.99
+"Atlantic","CCA (crustose coralline algae)",-0.01,-0.04,0.03
+"Atlantic","Cladocora arbuscula",5.39,3.89,6.94
 "Atlantic","Cliona",-5.17,-7.3,-3.04
 "Atlantic","Cliona californiana",-5.17,-7.3,-3.04
 "Atlantic","Cliona celata",-5.17,-7.3,-3.04
@@ -133,112 +132,89 @@
 "Atlantic","Cliona sp.",-5.17,-7.3,-3.04
 "Atlantic","Cliona spp.",-5.17,-7.3,-3.04
 "Atlantic","Clionid spp.",-5.17,-7.3,-3.04
-"Atlantic","Colpophyllia",7.05,6.6,7.49
-"Atlantic","Colpophyllia natans",7.04,6.6,7.48
+"Atlantic","Colpophyllia natans",7.04,6.61,7.49
 "Atlantic","Coral:Rock",-0.24,-0.24,-0.24
-"Atlantic","Crustose",-0.01,-0.05,0.03
-"Atlantic","Crustose coralline algae",-0.01,-0.04,0.03
-"Atlantic","Dendrogyra",3.99,3.9,4.08
 "Atlantic","Dendrogyra cylindrus",3.99,3.9,4.08
-"Atlantic","Dichocoenia",2.99,2.54,3.51
-"Atlantic","Dichocoenia stokesii",2.98,2.56,3.49
-"Atlantic","Diploria",9.28,8.69,9.86
-"Atlantic","Diploria labyrinthiformis",9.27,8.69,9.86
+"Atlantic","Dichocoenia stokesi",3,2.54,3.5
+"Atlantic","Diploria labyrinthiformis",9.28,8.71,9.86
 "Atlantic","EAM: Rock or Substrate",-0.24,-0.24,-0.24
 "Atlantic","Endolithic Algae on Rock",-0.24,-0.24,-0.24
-"Atlantic","Eusmilia",0.93,0.67,1.19
 "Atlantic","Eusmilia fastigiata",0.93,0.67,1.19
 "Atlantic","Excavating Bite Scar",-0.01,0.02,-0.04
 "Atlantic","Exposed Rock",-0.24,-0.24,-0.24
 "Atlantic","Favia",8.46,8.34,8.59
-"Atlantic","Favia fragum",8.46,8.34,8.59
+"Atlantic","Favia fragum",8.46,8.34,8.6
 "Atlantic","Green Rock",-0.24,-0.24,-0.24
-"Atlantic","Hard",4.86,4.22,5.58
-"Atlantic","Hard coral (branched)",1.19,0.85,1.52
-"Atlantic","Hard coral (encrusting)",2.44,1.91,3.1
-"Atlantic","Hard coral (foliose)",5.28,4.64,5.99
-"Atlantic","Hard coral (massive)",11.82,10.4,13.38
-"Atlantic","Hard coral (plate/foliose)",5.28,4.64,5.99
-"Atlantic","Hard coral (plating)",5.28,4.64,5.99
-"Atlantic","Helioseris",3.68,3.53,3.83
-"Atlantic","Helioseris cucullata",3.67,3.53,3.83
-"Atlantic","Isophyllia",8.05,7.58,8.55
-"Atlantic","Isophyllia rigida",6.02,5.61,6.44
-"Atlantic","Isophyllia sinuosa",10.31,9.76,10.9
+"Atlantic","Hard coral",4.86,4.22,5.54
+"Atlantic","Hard Coral (branching)",1.17,0.85,1.52
+"Atlantic","Hard Coral (encrusting)",2.42,1.91,3.09
+"Atlantic","Hard Coral (foliose)",5.28,4.66,6
+"Atlantic","Hard Coral (massive)",11.82,10.45,13.37
+"Atlantic","Helioseris cucullata",3.67,3.52,3.83
+"Atlantic","Isophyllia",8.07,7.58,8.55
+"Atlantic","Isophyllia rigida",6.03,5.63,6.43
+"Atlantic","Isophyllia sinuosa",10.32,9.76,10.89
 "Atlantic","Lightly Biofilmed Rock",-0.24,-0.24,-0.24
-"Atlantic","Macroalgae with CCA",-0.01,-0.04,0.03
-"Atlantic","Madracis",20.09,16.73,24.11
-"Atlantic","Madracis asperula",6.95,4.94,8.94
-"Atlantic","Madracis auretenra",4.33,3.1,5.57
-"Atlantic","Madracis carmabi",7.33,5.26,9.48
-"Atlantic","Madracis decactis",47.21,31.08,69.12
-"Atlantic","Madracis formosa",5.48,3.91,7.05
-"Atlantic","Madracis pharensis",67.7,59.42,77.43
-"Atlantic","Madracis senaria",67.85,59.26,77.94
-"Atlantic","Madracis spp.",5.53,4.01,7.23
-"Atlantic","Manicina",18.83,18.51,19.2
-"Atlantic","Manicina areolata",18.83,18.5,19.19
-"Atlantic","Meandrina",3.16,2.72,3.6
-"Atlantic","Meandrina danae",3.3,2.8,3.85
-"Atlantic","Meandrina meandrites",2.84,2.57,3.12
-"Atlantic","Meandrina spp.",3.32,2.8,3.84
-"Atlantic","Millepora",4.27,3.46,5.33
-"Atlantic","Millepora alcicornis",0.68,0.48,0.88
+"Atlantic","Macroalgae: Laminate: red: peysonnelia",-0.01,-0.04,0.03
+"Atlantic","Madracis",20.18,16.77,24.05
+"Atlantic","Madracis auretenra",4.26,3.09,5.52
+"Atlantic","Madracis carmabi",7.32,5.25,9.52
+"Atlantic","Madracis decactis",47.22,31.8,69.26
+"Atlantic","Madracis formosa",5.51,3.96,7.08
+"Atlantic","Madracis pharensis",68.05,59.29,78.03
+"Atlantic","Madracis senaria",67.94,59.64,77.76
+"Atlantic","Manicina areolata",18.84,18.49,19.21
+"Atlantic","Meandrina",3.16,2.73,3.59
+"Atlantic","Meandrina meandrites",2.85,2.57,3.12
+"Atlantic","Millepora",4.27,3.46,5.32
+"Atlantic","Millepora alcicornis",0.68,0.49,0.88
 "Atlantic","Millepora complanata",2.51,1.8,3.46
-"Atlantic","Millepora squarrosa",11.19,9.05,13.99
-"Atlantic","Millepora striata",2.28,1.64,2.93
-"Atlantic","Montastraea",11.61,10.08,13.14
-"Atlantic","Montastraea cavernosa",11.57,10.06,13.12
-"Atlantic","Mussa",11.25,11.25,11.25
+"Atlantic","Millepora squarrosa",11.15,9.07,13.94
+"Atlantic","Montastraea",11.63,10.09,13.12
+"Atlantic","Montastraea cavernosa",11.56,10.07,13.06
 "Atlantic","Mussa angulosa",11.25,11.25,11.25
 "Atlantic","Mycetophyllia",3.98,3.62,4.35
-"Atlantic","Mycetophyllia aliciae",3.29,3,3.59
-"Atlantic","Mycetophyllia danae",2.84,2.53,3.17
-"Atlantic","Mycetophyllia ferox",3.12,2.83,3.43
-"Atlantic","Mycetophyllia lamarckiana",6.6,5.99,7.3
-"Atlantic","Mycetophyllia reesi",2.64,2.34,2.95
-"Atlantic","Mycetophyllia spp.",4.46,3.97,4.98
-"Atlantic","Oculina",1.06,0.76,1.37
-"Atlantic","Oculina diffusa",1.06,0.77,1.37
-"Atlantic","Orbicella",23.62,21.58,25.92
-"Atlantic","Orbicella annularis",32.58,29.11,36.26
-"Atlantic","Orbicella faveolata",25.65,22.1,29.27
+"Atlantic","Mycetophyllia aliciae",3.28,3,3.58
+"Atlantic","Mycetophyllia danaana",2.84,2.52,3.17
+"Atlantic","Mycetophyllia ferox",3.12,2.82,3.43
+"Atlantic","Mycetophyllia lamarckana",6.63,6.01,7.34
+"Atlantic","Oculina",1.07,0.76,1.37
+"Atlantic","Oculina diffusa",1.07,0.77,1.37
+"Atlantic","Orbicella",23.58,21.5,25.92
+"Atlantic","Orbicella annularis",32.57,29.25,36.28
+"Atlantic","Orbicella faveolata",25.89,22.27,29.34
 "Atlantic","Orbicella franksi",12.71,12.38,13.2
-"Atlantic","Peysonellid",-0.01,-0.04,0.03
-"Atlantic","Peysonellid",-0.01,-0.04,0.03
-"Atlantic","Porites",5.07,4.57,5.62
-"Atlantic","Porites astreoides",9.75,8.41,11.09
-"Atlantic","Porites branneri",10.24,9.2,11.29
-"Atlantic","Porites colonensis",5.63,4.95,6.34
-"Atlantic","Porites divaricata",1.86,1.34,2.38
-"Atlantic","Porites furcata",2.02,1.46,2.6
-"Atlantic","Porites porites",3,2.16,3.88
-"Atlantic","Pseudodiploria",10.61,9.18,11.97
-"Atlantic","Pseudodiploria clivosa",9.93,8.77,11.12
-"Atlantic","Pseudodiploria strigosa",11.39,9.75,13.02
+"Atlantic","Porites",5.08,4.58,5.65
+"Atlantic","Porites astreoides",9.76,8.43,11.1
+"Atlantic","Porites branneri",10.28,9.22,11.31
+"Atlantic","Porites colonensis",5.64,4.96,6.37
+"Atlantic","Porites divaricata",1.86,1.35,2.4
+"Atlantic","Porites furcata",2.03,1.44,2.6
+"Atlantic","Porites porites",3.04,2.18,3.88
+"Atlantic","Pseudodiploria",10.64,9.25,12
+"Atlantic","Pseudodiploria clivosa",9.96,8.74,11.13
+"Atlantic","Pseudodiploria strigosa",11.41,9.86,13.03
 "Atlantic","Rock",-0.24,-0.24,-0.24
-"Atlantic","Rock Crustose Coralline Algae",-0.01,-0.04,0.03
+"Atlantic","Rock Crustose Coralline Algae",-0.24,-0.24,-0.24
 "Atlantic","Rock Turf Algae",-0.24,-0.24,-0.24
 "Atlantic","Rock_Pavement",-0.24,-0.24,-0.24
-"Atlantic","Scolymia",10.36,9.6,11.14
-"Atlantic","Scolymia cubensis",9.91,9.2,10.68
-"Atlantic","Scolymia lacera",10.73,9.95,11.52
-"Atlantic","Siderastrea",5.38,4.95,5.83
+"Atlantic","Scolymia",10.36,9.61,11.18
+"Atlantic","Scolymia cubensis",9.9,9.16,10.65
+"Atlantic","Scolymia lacera",10.71,9.94,11.53
+"Atlantic","Siderastrea",5.39,4.96,5.87
 "Atlantic","Siderastrea radians",3.12,2.98,3.32
-"Atlantic","Siderastrea siderea",8.04,7.19,8.9
+"Atlantic","Siderastrea siderea",8.07,7.2,8.9
 "Atlantic","Smothered Rock",-0.24,-0.24,-0.24
-"Atlantic","Solenastrea",12.36,11.63,13.08
-"Atlantic","Solenastrea bournoni",17.08,16.67,17.55
-"Atlantic","Solenastrea hyades",5.7,5.13,6.3
+"Atlantic","Solenastrea",12.36,11.62,13.08
+"Atlantic","Solenastrea bournoni",17.08,16.67,17.54
+"Atlantic","Solenastrea hyades",5.7,5.13,6.29
 "Atlantic","Sponge: Cliona",-5.17,-7.3,-3.04
-"Atlantic","Stephanocoenia",5.21,4.88,5.57
-"Atlantic","Stephanocoenia intersepta",5.21,4.88,5.58
-"Atlantic","Stylaster",0.81,0.58,1.07
-"Atlantic","Stylaster roseus",0.83,0.59,1.07
+"Atlantic","Stephanocoenia intersepta",5.22,4.87,5.58
+"Atlantic","Stylaster roseus",0.81,0.59,1.07
 "Atlantic","Substrate: Consolidated (hard) Rock",-0.24,-0.24,-0.24
 "Atlantic","Thick Sediment Over Rock",-0.24,-0.24,-0.24
 "Atlantic","Thin Sediment over Rock",-0.24,-0.24,-0.24
 "Atlantic","Thin Turf/Biofilm on Rock",-0.24,-0.24,-0.24
-"Atlantic","Tubastraea",1.19,0.85,1.52
-"Atlantic","Tubastraea coccinea",1.18,0.85,1.52
+"Atlantic","Tubastraea",1.17,0.85,1.52
+"Atlantic","Tubastraea coccinea",1.17,0.84,1.52
 "Atlantic","Very Thin Sediment over Rock",-0.24,-0.24,-0.24

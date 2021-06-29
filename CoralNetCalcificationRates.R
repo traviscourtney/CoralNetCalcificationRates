@@ -3,7 +3,7 @@
 ##’
 ##’ @author Travis A Courtney
 ##’ @contact traviscourtney@gmail.com
-##’ @date 2021-06–25
+##’ @date 2021-06–28
 ##’ @reference Courtney TA, Chan S, Lange ID, Perry CT, Andersson AJ (2021) Area-normalized ReefBudget calcification and bioerosion rates for use with CoralNet
 ##’ @log Version 1
 
@@ -262,8 +262,6 @@ Porites_rates=bind_cols(Region="Indo-Pacific",Name="Porites",'Mean'=round(mean(P
 #combine NOAA CRED labels with duplicate labels and genus level labels
 calc_rates_indopacific_all=bind_rows(calc_rates_indopacific,duplicate_labels_indopacific,Acropora_rates,Montipora_rates,Porites_rates) %>% arrange(Name)
 calc_rates_indopacific_all=calc_rates_indopacific_all[complete.cases(calc_rates_indopacific_all),]
-#write.csv(calc_rates_indopacific_all,"calc_rates_indopacific_06252021.csv",row.names=FALSE)
-
 
 #########CoralNet Western Atlantic Calcification Rates##########
 #Import Required Data
@@ -399,6 +397,8 @@ genera_rates = CARICOMP_rates %>%
 
 #remove macroalgae genera because this only applies to Macroalgae with CCA
 genera_rates=genera_rates[is.na(str_match(genera_rates$genera,"Macroalgae")),]
+#remove Peysonellid genera to avoid duplicates
+genera_rates=genera_rates[is.na(str_match(genera_rates$genera,"Peysonellid")),]
 
 #merge genera means and taxa-specific rates
 rug_means=as_tibble(with(CARICOMP_rates,cbind(name,coeff_mean,coeff_lwr,coeff_upr,int_mean,int_lwr,int_upr,rugosity_mean,rugosity_sd,length_mean,length_upr,length_lwr,cf_lwr,cf_upr)))
@@ -438,15 +438,17 @@ colnames(CoralNet_Atlantic)=c("name","functional_group","label")
 #merge calcification rates with CoralNet Labels
 CoralNet_Atlantic_Rates = merge(scaled_calcification_rates,CoralNet_Atlantic,by="name",all=TRUE)
 
-#Assign missing CoralNet labels to rates
-CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Crustose coralline algae")),]$label="CCA"
-CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Hard coral \\(branched\\)")),]$label="C_branch"
-CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Hard coral \\(encrusting\\)")),]$label="HC_encr"
-CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Hard coral \\(massive\\)")),]$label="HC_massive"
-CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Agaricia spp")),]$label="Agaricia"
-CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Madracis spp")),]$label="Madracis"
-CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Meandrina spp")),]$label="Meandrina"
-CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Mycetophyllia spp")),]$label="Mycetophyllia"
+#Correct mismatched names (including typos) with CoralNet to ensure correct mapping of calcification rate data
+CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Crustose coralline algae")),]$name="CCA (crustose coralline algae)"
+CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Dichocoenia stokesii")),]$name="Dichocoenia stokesi"
+CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"^Hard$")),]$name="Hard coral"
+CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Hard coral \\(branched\\)")),]$name="Hard Coral (branching)"
+CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Hard coral \\(encrusting\\)")),]$name="Hard Coral (encrusting)"
+CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Hard coral \\(massive\\)")),]$name="Hard Coral (massive)"
+CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Hard coral \\(plate/foliose\\)")),]$name="Hard Coral (foliose)"
+CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Mycetophyllia danae")),]$name="Mycetophyllia danaana"
+CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Mycetophyllia lamarckiana")),]$name="Mycetophyllia lamarckana"
+CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Peysonellid")),]$name="Macroalgae: Laminate: red: peysonnelia"
 
 #Import microbioerosion data and apply to "rock" substrate labels
 CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock")),]$calc=microbioerosion_atlantic
@@ -454,9 +456,9 @@ CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock")),]
 CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock")),]$calc_upper=microbioerosion_atlantic
 
 #Replace "Rock Crustose Coralline Algae" label with "Crustose Coralline Algae" rate
-CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock Crustose Coralline Algae")),]$calc=scaled_calcification_rates[!is.na(str_match(scaled_calcification_rates$name,"Crustose coralline algae")),]$calc
-CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock Crustose Coralline Algae")),]$calc_lower=scaled_calcification_rates[!is.na(str_match(scaled_calcification_rates$name,"Crustose coralline algae")),]$calc_lower
-CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock Crustose Coralline Algae")),]$calc_upper=scaled_calcification_rates[!is.na(str_match(scaled_calcification_rates$name,"Crustose coralline algae")),]$calc_upper
+CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock Crustose Coralline Algae")),]$calc=scaled_calcification_rates[!is.na(str_match(scaled_calcification_rates$name,"CCA (crustose coralline algae)")),]$calc
+CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock Crustose Coralline Algae")),]$calc_lower=scaled_calcification_rates[!is.na(str_match(scaled_calcification_rates$name,"CCA (crustose coralline algae)")),]$calc_lower
+CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock Crustose Coralline Algae")),]$calc_upper=scaled_calcification_rates[!is.na(str_match(scaled_calcification_rates$name,"CCA (crustose coralline algae)")),]$calc_upper
 
 #Import macrobioerosion data and apply to boring sponge substrate labels
 macrobiorates=macrobioerosion[1:8,c(3,7)]
@@ -481,25 +483,14 @@ CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$label,"BiteScar
 CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$label,"BiteScar")),]$calc_lower=parrot_mean-parrot_sd
 CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$label,"BiteScar")),]$calc_upper=parrot_mean+parrot_sd
 
-#Assign missing Hard Coral Plating CoralNet labels to rates
-HardCoralPlating=CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"plate/foliose")),]
-HardCoralPlating$name="Hard coral (plating)"
-HardCoralPlating$label="HCP"
-
-#Assign missing Hard Coral Foliose CoralNet labels to rates
-HardCoralFoliose=CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"plate/foliose")),]
-HardCoralFoliose$name="Hard coral (foliose)"
-HardCoralFoliose$label="HC_fol"
-
-#Merge data frames
-CoralNet_Atlantic_Rates2=rbind(CoralNet_Atlantic_Rates,HardCoralPlating,HardCoralFoliose)
 #add atlantic region label
-CoralNet_Atlantic_Rates2$region="Atlantic"
-#remove extra columns and labels missing calcification rates
-CoralNet_Atlantic_Rates3=CoralNet_Atlantic_Rates2 %>% select('Region'=region,'Name'=name,'Mean'=calc,'Lower bound'=calc_lower,'Upper bound'=calc_upper) %>% drop_na()
-#order by name
-calc_rates_atlantic=CoralNet_Atlantic_Rates3[order(CoralNet_Atlantic_Rates3$Name),]
-#write.csv(calc_rates_atlantic,"calc_rates_atlantic_06252021.csv",row.names=FALSE)
+CoralNet_Atlantic_Rates$region="Atlantic"
+#select only names that match CoralNet, remove extra columns, and drop missing calcification rates
+CoralNet_Atlantic_Rates2=merge(CoralNet_Atlantic_Rates,CoralNet_Atlantic,by="name",all.y=TRUE) %>% 
+  select('Region'=region,'Name'=name,'Mean'=calc,'Lower bound'=calc_lower,'Upper bound'=calc_upper) %>% 
+  drop_na()
+#order calcification rates by name
+calc_rates_atlantic=CoralNet_Atlantic_Rates2[order(CoralNet_Atlantic_Rates2$Name),]
 
 #########Merge Indo-Pacific and Western Atlantic Calcification Rate Tables##########
 calc_rates=bind_rows(calc_rates_indopacific_all,calc_rates_atlantic) %>% drop_na()
