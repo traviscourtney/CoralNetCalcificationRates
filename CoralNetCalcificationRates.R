@@ -9,7 +9,7 @@
 
 ###########include or exclude bioerosion##########
 #bioerosion rates are included by default, set include_bioerosion to FALSE to calculate gross carbonate production only
-include_bioerosion=TRUE
+include_bioerosion=FALSE
 
 ###########require packages and scripts##########
 library(fs)
@@ -456,9 +456,9 @@ CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock")),]
 CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock")),]$calc_upper=microbioerosion_atlantic
 
 #Replace "Rock Crustose Coralline Algae" label with "Crustose Coralline Algae" rate
-CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock Crustose Coralline Algae")),]$calc=scaled_calcification_rates[!is.na(str_match(scaled_calcification_rates$name,"CCA (crustose coralline algae)")),]$calc
-CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock Crustose Coralline Algae")),]$calc_lower=scaled_calcification_rates[!is.na(str_match(scaled_calcification_rates$name,"CCA (crustose coralline algae)")),]$calc_lower
-CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock Crustose Coralline Algae")),]$calc_upper=scaled_calcification_rates[!is.na(str_match(scaled_calcification_rates$name,"CCA (crustose coralline algae)")),]$calc_upper
+CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock Crustose Coralline Algae")),]$calc=scaled_calcification_rates[!is.na(str_match(scaled_calcification_rates$name,"Crustose coralline algae")),]$calc
+CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock Crustose Coralline Algae")),]$calc_lower=scaled_calcification_rates[!is.na(str_match(scaled_calcification_rates$name,"Crustose coralline algae")),]$calc_lower
+CoralNet_Atlantic_Rates[!is.na(str_match(CoralNet_Atlantic_Rates$name,"Rock Crustose Coralline Algae")),]$calc_upper=scaled_calcification_rates[!is.na(str_match(scaled_calcification_rates$name,"Crustose coralline algae")),]$calc_upper
 
 #Import macrobioerosion data and apply to boring sponge substrate labels
 macrobiorates=macrobioerosion[1:8,c(3,7)]
@@ -494,4 +494,5 @@ calc_rates_atlantic=CoralNet_Atlantic_Rates2[order(CoralNet_Atlantic_Rates2$Name
 
 #########Merge Indo-Pacific and Western Atlantic Calcification Rate Tables##########
 calc_rates=bind_rows(calc_rates_indopacific_all,calc_rates_atlantic) %>% drop_na()
-write.csv(calc_rates,"CoralNet_Calcification_Bioerosion_Rates_v1.csv",row.names=FALSE)
+file_name=ifelse(include_bioerosion==TRUE,"CoralNet_Calcification_With_Bioerosion_Rates_v1.csv","CoralNet_Calcification_Without_Bioerosion_Rates_v1.csv")
+write.csv(calc_rates,file_name,row.names=FALSE)
