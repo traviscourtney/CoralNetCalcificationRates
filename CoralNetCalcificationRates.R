@@ -3,9 +3,9 @@
 ##’
 ##’ @author Travis A Courtney
 ##’ @contact traviscourtney@gmail.com
-##’ @date 2021-06–28
-##’ @reference Courtney TA, Chan S, Lange ID, Perry CT, Andersson AJ (2021) Area-normalized ReefBudget calcification and bioerosion rates for use with CoralNet
-##’ @log Version 1
+##’ @date 2021-07–11
+##’ @reference Courtney TA, Chan S, Lange ID, Perry CT, Kriegman DJ, Andersson AJ (2021) Area-normalized ReefBudget calcification and bioerosion rates for use with CoralNet
+##’ @log Version 1.0
 
 ###########include or exclude bioerosion##########
 #bioerosion rates are included by default, set include_bioerosion to FALSE to calculate gross carbonate production only
@@ -24,12 +24,12 @@ options(scipen=999)
 #########CoralNet Indo-Pacific Calcification Rates#########
 #Import Required Data
 setwd("Data")
-setwd("NOAA_Pacific_Coral_Demography") #Import NOAA Pacific Coral Demograhy Data from multiple files
+setwd("NOAA_Pacific_Coral_Demography") #Import NOAA Pacific Coral Demography Data from multiple files
 NOAA_demography_raw=
   dir_ls(regexp = "\\.csv$") %>% 
   map_dfr(read_csv, .id = "source")
 setwd("..")
-NOAA_CRED_CoralNet_labelset <- read_excel("NOAA_CRED_CoralNet_labelset.xlsx") #Import NOAA CRED CoralNet labelset
+NOAA_CRED_CoralNet_labelset <- read_csv("NOAA_CRED_CoralNet_labelset2.csv") #Import NOAA CRED CoralNet labelset
 Gonzalez_Barrios <- read_csv("Gonzalez-Barios_Alvarez-Filip_2019_Rugosity.csv") #Import Gonzalez-Barrios taxa-level estimates of colony structural complexity
 ReefBudget_Pacific <- read_excel("Indo-Pacific_Carbonate_Production_v1.2.xlsx", sheet = "Calcification Rates", skip = 9) #import Indo-Pacific ReefBudget rates
 macromicro_bioerosion=read_excel("Indo-Pacific_Carbonate_Production_v1.2.xlsx", sheet = "Macro- & Microbioerosion") #import Indo_Pacific ReefBudget bioerosion rates
@@ -164,6 +164,7 @@ NOAA_mgr_rates[NOAA_mgr_rates$GENUS_MORPHOLOGY=="Columnar columnar",13:18]=ReefB
 NOAA_mgr_rates[NOAA_mgr_rates$GENUS_MORPHOLOGY=="Foliose foliose",13:18]=ReefBudget_Pacific_short[ReefBudget_Pacific_short$GENUS_MORPHOLOGY=="Hard coral foliose",2:7]
 NOAA_mgr_rates[NOAA_mgr_rates$GENUS_MORPHOLOGY=="Encrusting encrusting",13:18]=ReefBudget_Pacific_short[ReefBudget_Pacific_short$GENUS_MORPHOLOGY=="Hard coral encrusting",2:7]
 NOAA_mgr_rates[NOAA_mgr_rates$GENUS_MORPHOLOGY=="Massive massive",13:18]=ReefBudget_Pacific_short[ReefBudget_Pacific_short$GENUS_MORPHOLOGY=="Hard coral massive",2:7]
+NOAA_mgr_rates[NOAA_mgr_rates$GENUS_MORPHOLOGY=="Montastraea encrusting",13:18]=ReefBudget_Pacific_short[ReefBudget_Pacific_short$GENUS_MORPHOLOGY=="Montastrea encrusting",2:7]
 NOAA_mgr_rates[NOAA_mgr_rates$GENUS_MORPHOLOGY=="Fungia free-living",13:18]=ReefBudget_Pacific_short[ReefBudget_Pacific_short$GENUS_MORPHOLOGY=="Fungia freeliving",2:7]
 NOAA_mgr_rates[NOAA_mgr_rates$GENUS_MORPHOLOGY=="Goniopora/Alveopora encrusting",13:18]=ReefBudget_Pacific_short[ReefBudget_Pacific_short$GENUS_MORPHOLOGY=="Goniopora encrusting",2:7]
 NOAA_mgr_rates[NOAA_mgr_rates$GENUS_MORPHOLOGY=="Merulina foliose",13:18]=ReefBudget_Pacific_short[ReefBudget_Pacific_short$GENUS_MORPHOLOGY=="Merulina plating",2:7]
@@ -251,16 +252,26 @@ calc_rates_indopacific_duplicates=merge(calc_rates_indopacific,duplicates,by="Na
 duplicate_labels_indopacific=calc_rates_indopacific_duplicates%>%select('Region','Duplicate','Mean','Lower bound','Upper bound')
 duplicate_labels_indopacific=rename(duplicate_labels_indopacific,Name=Duplicate)
 
-#generate genus level means from genus+morphology NOAA CRED labels
+#generate genus level and hard coral means from genus+morphology and hard coral+morphology NOAA CRED labels 
 Acropora=calc_rates_indopacific[str_which(calc_rates_indopacific$Name,"Acropora"),]
 Acropora_rates=bind_cols(Region="Indo-Pacific",Name="Acropora",'Mean'=round(mean(Acropora$'Mean'),digits=2),'Lower bound'=round(mean(Acropora$'Lower bound'),digits=2),'Upper bound'=round(mean(Acropora$'Upper bound'),digits=2))
 Montipora=calc_rates_indopacific[str_which(calc_rates_indopacific$Name,"Montipora"),]
 Montipora_rates=bind_cols(Region="Indo-Pacific",Name="Montipora",'Mean'=round(mean(Montipora$Mean),digits=2),'Lower bound'=round(mean(Montipora$'Lower bound'),digits=2),'Upper bound'=round(mean(Montipora$'Upper bound'),digits=2))
 Porites=calc_rates_indopacific[str_which(calc_rates_indopacific$Name,"Porites"),]
 Porites_rates=bind_cols(Region="Indo-Pacific",Name="Porites",'Mean'=round(mean(Porites$Mean),digits=2),'Lower bound'=round(mean(Porites$'Lower bound'),digits=2),'Upper bound'=round(mean(Porites$'Upper bound'),digits=2))
+Hard_coral=calc_rates_indopacific[str_which(calc_rates_indopacific$Name,"hard coral"),]
+Hard_coral_rates=bind_cols(Region="Indo-Pacific",Name="Hard coral",'Mean'=round(mean(Hard_coral$Mean),digits=2),'Lower bound'=round(mean(Hard_coral$'Lower bound'),digits=2),'Upper bound'=round(mean(Hard_coral$'Upper bound'),digits=2))
+
+#manually pair up CRED CCA and Rock duplicates with commonly used CoralNet labels
+CCA_rates=calc_rates_indopacific[str_which(calc_rates_indopacific$Name,"CRED-CCA growing on hard substrate"),]
+CCA_rates$Name="CCA (crustose coralline algae)"
+Rock_rates=calc_rates_indopacific[str_which(calc_rates_indopacific$Name,"CRED-Hard substrate"),]
+Rock_rates$Name="Rock"
+Bare_Rock_rates=calc_rates_indopacific[str_which(calc_rates_indopacific$Name,"CRED-Hard substrate"),]
+Bare_Rock_rates$Name="Bare Rock"
 
 #combine NOAA CRED labels with duplicate labels and genus level labels
-calc_rates_indopacific_all=bind_rows(calc_rates_indopacific,duplicate_labels_indopacific,Acropora_rates,Montipora_rates,Porites_rates) %>% arrange(Name)
+calc_rates_indopacific_all=bind_rows(calc_rates_indopacific,duplicate_labels_indopacific,Acropora_rates,Montipora_rates,Porites_rates,Hard_coral_rates,CCA_rates,Rock_rates,Bare_Rock_rates) %>% arrange(Name)
 calc_rates_indopacific_all=calc_rates_indopacific_all[complete.cases(calc_rates_indopacific_all),]
 
 #########CoralNet Western Atlantic Calcification Rates##########
@@ -494,5 +505,5 @@ calc_rates_atlantic=CoralNet_Atlantic_Rates2[order(CoralNet_Atlantic_Rates2$Name
 
 #########Merge Indo-Pacific and Western Atlantic Calcification Rate Tables##########
 calc_rates=bind_rows(calc_rates_indopacific_all,calc_rates_atlantic) %>% drop_na()
-file_name=ifelse(include_bioerosion==TRUE,"CoralNet_Calcification_With_Bioerosion_Rates_v1.csv","CoralNet_Calcification_Without_Bioerosion_Rates_v1.csv")
+file_name=ifelse(include_bioerosion==TRUE,"CoralNet_Calcification_With_Bioerosion_Rates_1.csv","CoralNet_Calcification_Without_Bioerosion_Rates_1.csv")
 write.csv(calc_rates,file_name,row.names=FALSE)
